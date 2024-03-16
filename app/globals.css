@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-height {
+  height: 39rem;
+}
+
+.hiddenEle {
+  display: none;
+}
