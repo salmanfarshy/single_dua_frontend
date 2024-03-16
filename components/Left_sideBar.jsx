@@ -1,5 +1,5 @@
 import React from "react";
-import Mini_icon from "./mini_icon";
+import Mini_icon from "./Mini_icon";
 function Left_sideBar() {
   return (
     <div className=" flex items-center justify-center lg:my-auto sm:mx-auto">
