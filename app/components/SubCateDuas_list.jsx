@@ -29,7 +29,7 @@ function SubCateDuas_list({ subcat_id }) {
           duasData.map(
             (dua) =>
               dua.dua_name_en !== null && (
-                <li className="mt-4 me-2 ">
+                <li className="mt-4 me-2 " key={dua.id}>
                   <a href={`#${dua.dua_name_en}`}>
                     <p className="text-sm line-clamp-1 select-none pointer-events-none">
                       &gt; {dua.dua_name_en}
