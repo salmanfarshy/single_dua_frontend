@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Top_bar() {
   return (
@@ -34,11 +35,14 @@ function Top_bar() {
       </div>
 
       <div className="flex items-center justify-center ms-[6rem]">
-        <img
+        <Image
           src="/images/profile.svg"
-          alt="home image"
+          alt=""
+          width={45}
+          height={10}
           className="border-green-500 border-[1px] rounded-full select-none pointer-events-none"
         />
+
         <svg
           className="ml-2 mr-2 "
           width="10"

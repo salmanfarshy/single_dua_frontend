@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useContext } from "react";
 import CategoryContext from "@/app/context/Category_context";
+import Image from "next/image";
 
 import Sub_categorys from "./Sub_categorys";
 
@@ -18,11 +19,15 @@ function Catagory_box({ catagory }) {
           setSubCategoryNo(null);
         }}
       >
-        <img
-          className="select-none pointer-events-none bg-customWhite h-12 w-12 ms-1 rounded-md"
-          src={`/images/${catagory.cat_icon}.svg`}
-          alt="duar_gurutto"
-        />
+        <div className="select-none pointer-events-none bg-customWhite h-12 w-12 ms-1 rounded-md flex justify-center items-center">
+          <Image
+            src={`/images/${catagory.cat_icon}.svg`}
+            alt="Description of the image"
+            width={38}
+            height={18}
+          />
+        </div>
+
         <div className="flex flex-col gap-0.5">
           <p className=" text-md text-green-800 font-semibold select-none pointer-events-none">
             {catagory.cat_name_en}

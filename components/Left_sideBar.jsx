@@ -1,14 +1,12 @@
 import React from "react";
 import Mini_icon from "./Mini_icon";
+import Image from "next/image";
+
 function Left_sideBar() {
   return (
     <div className=" flex items-center justify-center lg:my-auto sm:mx-auto">
       <div className=" lg:ms-6 sm:ms-0 bg-customWhite lg:h-[39rem] lg:w-20 sm:w-[55rem] sm:h-20 rounded-3xl flex shrink items-center justify-between lg:gap-4 sm:px-12 lg:px-0 lg:py-6 sm:py-0 lg:flex-col sm:flex-row lg:mt-0 sm:mt-4">
-        <img
-          src="/images/dua-logo.svg"
-          alt="dua-logo"
-          className="h-13 w-13 lg:mx-auto sm:my-auto bg-customGreen rounded-xl cursor-pointer mt-8 mb-16 select-none"
-        />
+        <Image src="/images/dua-logo.svg" alt="" width={52} height={10} />
 
         <Mini_icon url="/images/home.svg" />
         <Mini_icon url="/images/alldua.svg" />

@@ -20,7 +20,7 @@ function SubCateDuas_list({ subcat_id }) {
       }
     }
     fetchData();
-  }, []);
+  }, [subcat_id]);
 
   return (
     <>

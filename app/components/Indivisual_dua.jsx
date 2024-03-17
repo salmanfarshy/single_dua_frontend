@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Audio_player from "./Audio_player";
+import Image from "next/image";
 
 function Indivisual_dua({ dua }) {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -25,7 +26,8 @@ function Indivisual_dua({ dua }) {
         className="w-full bg-customWhite rounded-xl min-h-20 mt-5 p-6"
       >
         <div className="flex gap-3 items-center">
-          <img src="/images/duacard.svg" alt="" />
+          <Image src="/images/duacard.svg" alt="" width={30} height={10} />
+
           <p className="text-green-700 font-semibold text-lg">
             {dua.id + ". " + dua.dua_name_en}
           </p>
@@ -74,7 +76,12 @@ function Indivisual_dua({ dua }) {
           {dua.audio ? (
             <div className="flex gap-5 items-center select-none">
               <div role="button" onClick={() => setIsAudioPlaying(true)}>
-                <img src="/images/audiobtn.svg" alt="" />
+                <Image
+                  src="/images/audiobtn.svg"
+                  alt=""
+                  width={45}
+                  height={10}
+                />
               </div>
               {isAudioPlaying && <Audio_player url={dua.audio} />}
             </div>
@@ -84,23 +91,23 @@ function Indivisual_dua({ dua }) {
           <div className="flex justify-center items-center gap-14">
             <div className="select-none" role="button" onClick={handleCopy}>
               {" "}
-              <img src="/images/copy.svg" alt="" />
+              <Image src="/images/copy.svg" alt="" width={25} height={10} />
             </div>
             <div className="select-none" role="button">
               {" "}
-              <img src="/images/bookmark.svg" alt="" />
+              <Image src="/images/bookmark.svg" alt="" width={20} height={10} />
             </div>
             <div className="select-none" role="button">
               {" "}
-              <img src="/images/plan.svg" alt="" />
+              <Image src="/images/plan.svg" alt="" width={20} height={10} />
             </div>
             <div className="select-none" role="button">
               {" "}
-              <img src="/images/share.svg" alt="" />
+              <Image src="/images/share.svg" alt="" width={20} height={10} />
             </div>
             <div className="select-none" role="button">
               {" "}
-              <img src="/images/report.svg" alt="" />
+              <Image src="/images/report.svg" alt="" width={20} height={10} />
             </div>
           </div>
         </div>

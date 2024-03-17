@@ -22,7 +22,7 @@ function Sub_categorys({ cat_id }) {
       }
     }
     fetchData();
-  }, []);
+  }, [cat_id]);
 
   return (
     <>
@@ -37,7 +37,10 @@ function Sub_categorys({ cat_id }) {
             <p className="text-sm font-medium select-none pointer-events-none">
               {sub_catagory.subcat_name_en}
             </p>
-            <SubCateDuas_list subcat_id={sub_catagory.subcat_id} />
+            <SubCateDuas_list
+              key={sub_catagory.subcat_id}
+              subcat_id={sub_catagory.subcat_id}
+            />
           </li>
         ))}
     </>
